@@ -1,0 +1,25 @@
+:root {
+  --color-bg-start: #d7e9f7;
+  --color-bg-end: #eef6fc;
+  --cloud-color: rgba(255, 255, 255, 0.75);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-start),
+    var(--color-bg-end)
+  );
+}

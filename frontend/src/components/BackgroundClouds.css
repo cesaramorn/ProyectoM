@@ -1,0 +1,79 @@
+.clouds {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 999px;
+  background: var(--cloud-color);
+  filter: blur(24px);
+  opacity: 0.9;
+}
+
+/* Individual clouds */
+
+.cloud1 {
+  width: 220px;
+  height: 110px;
+  top: 8%;
+  left: -220px;
+  animation: drift-right 70s linear infinite;
+}
+
+.cloud2 {
+  width: 320px;
+  height: 150px;
+  top: 28%;
+  left: -320px;
+  animation: drift-right 95s linear infinite;
+}
+
+.cloud3 {
+  width: 180px;
+  height: 90px;
+  top: 52%;
+  left: -180px;
+  animation: drift-right 60s linear infinite;
+}
+
+.cloud4 {
+  width: 260px;
+  height: 120px;
+  top: 68%;
+  right: -260px;
+  animation: drift-left 85s linear infinite;
+}
+
+.cloud5 {
+  width: 200px;
+  height: 95px;
+  top: 18%;
+  right: -200px;
+  animation: drift-left 65s linear infinite;
+}
+
+/* Animations */
+
+@keyframes drift-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(130vw);
+  }
+}
+
+@keyframes drift-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-130vw);
+  }
+}
