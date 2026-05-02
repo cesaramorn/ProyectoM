@@ -1,0 +1,13 @@
+.layout {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 2rem;
+}

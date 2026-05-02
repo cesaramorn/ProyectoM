@@ -6,7 +6,7 @@ import "./App.css";
 import BackgroundClouds from "./components/BackgroundClouds";
 import Layout from "./layouts/Principal";
 
-import Inicio from "./pages/Inicio";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
           <Routes>
             {/* Public routes */}
-            <Route path="/" element={<Inicio />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
 
             {/* Private / Layout routes */}
