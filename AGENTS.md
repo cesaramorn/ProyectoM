@@ -32,8 +32,6 @@ No root-level scripts. No test framework configured.
 ## Missing pieces (code references files that don't exist yet)
 
 App.jsx imports these but they have **not been created**:
-- `src/context/AuthContext.jsx`
-- `src/layouts/Principal.jsx`
 - `src/pages/Inicio.jsx`
 - `src/pages/Login.jsx`
 
