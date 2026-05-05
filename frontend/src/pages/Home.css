@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.home-title {
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.home-title:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+}
