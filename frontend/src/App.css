@@ -5,18 +5,14 @@
 }
 
 body {
-  margin: 0;
   font-family: Inter, system-ui, sans-serif;
-}
-
-#root {
-  min-height: 100vh;
 }
 
 .app-container {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 1;
   background: linear-gradient(
     180deg,
     var(--color-bg-start),

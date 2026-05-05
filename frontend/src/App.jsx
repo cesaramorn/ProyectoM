@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
 
-            {/* Private / Layout routes */}
+            {/* Private routes */}
             <Route element={<Layout />}>
               {/* Future routes */}
             </Route>
