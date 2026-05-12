@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Menu from "../components/Menu";
+import Menu from "../components/menu/Menu";
 import { useAuth } from "../context/AuthContext";
 
 import "./Home.css";
