@@ -1,0 +1,34 @@
+.menu-item {
+  flex: 1;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:last-child {
+  border-right: none;
+}
+
+.menu-item__link {
+  display: block;
+
+  padding: 0.75rem 0;
+
+  color: #1b1b32;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.menu-item__link:hover {
+  color: #ff6600;
+}
+
+@media (max-width: 768px) {
+  .menu-item__link {
+    font-size: 0.9rem;
+  }
+}
