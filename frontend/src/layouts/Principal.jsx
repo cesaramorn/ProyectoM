@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import Menu from "../components/Menu";
+import Menu from "../components/menu/Menu";
 import { navigationItems } from "../data/navigation";
 
 import "./Principal.css";
