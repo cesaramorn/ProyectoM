@@ -10,20 +10,24 @@
   border-right: none;
 }
 
-.menu-item__link {
+.menu-item__link,
+.menu-item button {
   display: block;
-
   padding: 0.75rem 0;
-
   color: #1b1b32;
-
-  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 500;
-
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
   transition: color 0.2s ease;
 }
 
-.menu-item__link:hover {
+.menu-item__link:hover,
+.menu-item button:hover {
   color: #ff6600;
 }
 

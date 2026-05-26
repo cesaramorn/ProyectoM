@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { publicNavigationItems } from "../data/navigation";
 
 import supabase from "../services/supabaseClient";
 import "./Login.css";
+
+import Menu from "../components/menu/Menu";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -32,6 +35,7 @@ function Login() {
 
   return (
     <div className="login">
+      <Menu items={publicNavigationItems} isVisible />
       <form className="login-form" onSubmit={handleLogin} noValidate>
         <input
           type="email"

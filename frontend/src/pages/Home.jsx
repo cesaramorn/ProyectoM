@@ -1,21 +1,23 @@
 import { useState } from "react";
-import Menu from "../components/menu/Menu";
 import { useAuth } from "../context/AuthContext";
+
+import { publicNavigationItems, privateNavigationItems } from "../data/navigation";
+
+import Menu from "../components/menu/Menu";
 
 import "./Home.css";
 
 function Home() {
   const [menuVisible, setMenuVisible] = useState(false);
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, signOut } = useAuth();
+
+  const handleMenuAction = (action) => {
+    if (action === "logout") signOut();
+  };
 
   const toggleMenu = () => setMenuVisible((prev) => !prev);
 
-  const navigationItems = isAuthenticated
-    ? [
-        { label: "Home", path: "/" },
-        // Future pages
-      ]
-    : [{ label: "Login", path: "/login" }];
+  const items = isAuthenticated ? privateNavigationItems : publicNavigationItems;
 
   return (
     <div className="home">
@@ -23,7 +25,7 @@ function Home() {
         Esto solo es una página que dice que te quiero...
       </h1>
 
-      <Menu items={navigationItems} isVisible={menuVisible} />
+      <Menu items={items} isVisible={menuVisible} onAction={handleMenuAction}/>
     </div>
   );
 }

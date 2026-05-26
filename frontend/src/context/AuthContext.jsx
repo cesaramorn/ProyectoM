@@ -34,10 +34,15 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
+  const signOut = async () => {
+    await supabase.auth.signOut();
+  };
+
   const value = {
     user,
     loading,
     isAuthenticated: !!user,
+    signOut
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

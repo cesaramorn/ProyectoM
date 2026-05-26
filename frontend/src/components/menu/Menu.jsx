@@ -5,7 +5,7 @@ import MenuItem from "./MenuItem";
 
 import "./Menu.css";
 
-function Menu({ items, isVisible }) {
+function Menu({ items, isVisible, onAction }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const itemsPerPage = 4;
@@ -44,9 +44,10 @@ function Menu({ items, isVisible }) {
 
         {visibleItems.map((item) => (
           <MenuItem
-            key={item.path}
+            key={item.path || item.action}
             label={item.label}
             path={item.path}
+            onClick={item.action ? () => onAction?.(item.action) : undefined}
           />
         ))}
 
