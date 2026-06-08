@@ -7,4 +7,19 @@
 .layout-content {
   flex: 1;
   padding: 2rem;
+  padding-top: calc(2rem + 60px);
+}
+
+.page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .layout-content {
+    padding-top: calc(2rem + 52px);
+  }
 }

@@ -1,0 +1,12 @@
+.travel-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.travel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

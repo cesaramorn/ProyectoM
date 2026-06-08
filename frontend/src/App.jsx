@@ -8,6 +8,7 @@ import Layout from "./layouts/Principal";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Travel from "./pages/Travel";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
 
             {/* Private routes */}
             <Route element={<Layout />}>
-              {/* Future routes */}
+              <Route path="/travel" element={<Travel />} />
             </Route>
           </Routes>
         </HashRouter>
