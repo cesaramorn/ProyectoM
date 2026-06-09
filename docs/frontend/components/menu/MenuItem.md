@@ -14,14 +14,16 @@ It is responsible for:
 
 ## Structure
 
-The component receives two props and renders a styled list item with a link.
+The component receives props and renders either a React Router `Link` or a `<button>` depending on the presence of `onClick`.
 
 **Props:**
-- `label` — Display text for the navigation link
-- `path` — Route path the link navigates to
+- `label` — Display text for the navigation item
+- `path` — Route path the link navigates to (optional; requires `react-router-dom`)
+- `onClick` — Click handler for action-based items like logout (optional)
 
 **Behavior:**
-- Uses React Router's `Link` component for client-side navigation without page reload
+- If `onClick` is provided, renders a `<button>` that calls the handler when clicked
+- If `path` is provided, renders a React Router `Link` for client-side navigation
 - Applies `menu-item` and `menu-item__link` CSS classes for styling
 - The last item in the list automatically omits the right border via `:last-child`
 
@@ -29,7 +31,7 @@ The component receives two props and renders a styled list item with a link.
 
 ## Dependencies
 
-- `react-router-dom`: `Link` component for declarative routing
+- `react-router-dom`: `Link` component for declarative routing (only when `path` is provided)
 
 ---
 

@@ -31,7 +31,7 @@ Wraps the application and provides authentication context to all children.
 - Cleans up the subscription on unmount
 
 **Context Value:**
-Memoized object containing `{ user, loading }` to prevent unnecessary re-renders.
+Memoized object containing `{ user, loading, isAuthenticated, signOut }` to prevent unnecessary re-renders.
 
 ### useAuth Hook
 
@@ -61,5 +61,5 @@ Wrap the application (typically in `App.jsx`) with `AuthProvider`:
 Access auth state in components:
 
 ```jsx
-const { user, loading } = useAuth();
+const { user, loading, isAuthenticated, signOut } = useAuth();
 ```

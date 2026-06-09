@@ -23,6 +23,7 @@ The component is a public route defined in `App.jsx` at path `/login`.
 - `error` — Error message to display on failed login attempts
 
 **Behavior:**
+- On mount, renders a `Menu` with `publicNavigationItems` always visible for navigation back to Home or other public routes
 - On submit, calls `supabase.auth.signInWithPassword()` with the entered credentials
 - Clears error state when the user starts typing again
 - On successful login, navigates to `/`
@@ -34,6 +35,8 @@ The component is a public route defined in `App.jsx` at path `/login`.
 
 - `supabaseClient` (from `src/services/supabaseClient`): Configured Supabase client for authentication
 - `useNavigate` (from `react-router-dom`): Programmatic navigation after login
+- `Menu` (from `src/components/menu/Menu`): Navigation menu always visible on the login page
+- `publicNavigationItems` (from `src/data/navigation`): Centralized public navigation configuration
 
 ---
 
@@ -43,7 +46,7 @@ Co-located CSS file `Login.css` lives next to the component, following the proje
 
 ### Key Styles
 
-- `.login`: Flex container that centers the form horizontally.
+- `.login`: Flex container with `min-height: 100vh` that centers the form both horizontally and vertically.
 - `.login-form`: Card-style form with max-width of 420px, semi-transparent background, border, and shadow.
 - `.login-form input`: Input fields with consistent height and no default border/outline.
 - `.login-form button`: Submit button with dark background, white text, and orange hover effect.

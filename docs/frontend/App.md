@@ -28,7 +28,7 @@ Accessible without internal layout:
 
 Wrapped inside the main layout component.
 
-Future internal routes will be added here.
+- `/travel` → Travel page
 
 ---
 

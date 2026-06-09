@@ -34,8 +34,9 @@ The component is a public route defined in `App.jsx` at path `/`.
 
 ## Components Used
 
-- `Menu` (from `src/components/Menu`): Renders the navigation menu with configured items.
-- `useAuth` (from `src/context/AuthContext`): Provides authentication state including `isAuthenticated`.
+- `Menu` (from `src/components/menu/Menu`): Renders the navigation menu with configured items and handles action-based items (e.g. logout via `onAction`).
+- `useAuth` (from `src/context/AuthContext`): Provides authentication state including `isAuthenticated` and `signOut`.
+- `publicNavigationItems` / `privateNavigationItems` (from `src/data/navigation`): Centralized navigation configuration.
 
 ---
 
@@ -45,5 +46,5 @@ Co-located CSS file `Home.css` lives next to the component, following the projec
 
 ### Key Styles
 
-- `.home`: Flex container that centers content vertically and horizontally with padding and centered text.
-- `.home-title`: Interactive heading with pointer cursor, transition effects, and responsive font size via media query.
+- `.home`: Flex container that centers content vertically and horizontally with `min-height: 100vh` and centered text.
+- `.home-title`: Interactive heading with pointer cursor, `Cormorant Garamond` font, responsive font size via `clamp()`, hover scale effect, and `user-select: none` to prevent selection while toggling the menu.

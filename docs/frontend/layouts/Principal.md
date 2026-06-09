@@ -14,18 +14,20 @@ It is responsible for:
 
 ## Structure
 
-The component uses `Outlet` from `react-router-dom` to render matching child route content. It includes a `Menu` component for navigation and applies the `principal` CSS class to the wrapper div.
+The component uses `Outlet` from `react-router-dom` to render matching child route content. It includes a `Menu` component with `privateNavigationItems` and applies the `layout` CSS class to the wrapper div.
 
 ### Menu Configuration
 
-The `Menu` component is initialized with an array of navigation elements, starting with an "Inicio" link pointing to the root route `/`.
+The `Menu` component receives `privateNavigationItems` (centralized private navigation including "Inicio", "Viajes", and "Salir") and an `onAction` handler that calls `signOut` from `useAuth()` when the logout action is triggered.
 
 ---
 
 ## Components Used
 
-- `Menu` (from `src/components/Menu`): Renders the navigation menu with configured elements.
+- `Menu` (from `src/components/menu/Menu`): Renders the navigation menu with configured items and handles action-based items via `onAction`.
 - `Outlet`: React Router DOM component that renders the matching child route inside the layout.
+- `useAuth` (from `src/context/AuthContext`): Provides `signOut` for the logout action handler.
+- `privateNavigationItems` (from `src/data/navigation`): Centralized private navigation configuration.
 
 ---
 

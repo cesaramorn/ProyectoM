@@ -17,8 +17,9 @@ It is responsible for:
 The component receives two props and manages internal pagination state.
 
 **Props:**
-- `items` — Array of `{ label, path }` objects to display as navigation links
+- `items` — Array of `{ label, path }` or `{ label, action }` objects to display as navigation links or action buttons
 - `isVisible` — Boolean that controls whether the menu is visible (slides in from the left)
+- `onAction` — Callback invoked when an item with `action` is clicked, receiving the action name as argument
 
 **State:**
 - `startIndex` — Tracks the current page offset for paginated items
