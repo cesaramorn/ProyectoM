@@ -1,15 +1,11 @@
 .travel-card {
   width: 100%;
   max-width: 1100px;
-
   display: flex;
-
   overflow: hidden;
-
   border-radius: 1rem;
 
   background-color: rgba(255, 255, 255, 0.8);
-
   backdrop-filter: blur(10px);
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);

@@ -6,6 +6,7 @@ import "./App.css";
 import BackgroundClouds from "./components/BackgroundClouds";
 import Layout from "./layouts/Principal";
 
+import Dictionary from "./pages/Dictionary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Travel from "./pages/Travel";
@@ -25,6 +26,7 @@ function App() {
             {/* Private routes */}
             <Route element={<Layout />}>
               <Route path="/travel" element={<Travel />} />
+              <Route path="/dictionary" element={<Dictionary />} />
             </Route>
           </Routes>
         </HashRouter>

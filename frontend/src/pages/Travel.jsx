@@ -37,7 +37,7 @@ function Travel() {
   return (
     <section className="travel-page">
       <h1 className="page-title">
-        Un paseo por algunas de nuestras aventuras...
+        Un paseo por nuestras aventuras...
       </h1>
 
       <div className="travel-list">
