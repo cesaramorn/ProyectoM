@@ -47,6 +47,7 @@ function Menu({ items, isVisible, onAction }) {
             key={item.path || item.action}
             label={item.label}
             path={item.path}
+            variant={item.variant}
             onClick={item.action ? () => onAction?.(item.action) : undefined}
           />
         ))}

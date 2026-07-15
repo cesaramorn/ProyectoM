@@ -9,6 +9,7 @@ import Layout from "./layouts/Principal";
 import Dictionary from "./pages/Dictionary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Recipes from "./pages/Recipes";
 import Travel from "./pages/Travel";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/travel" element={<Travel />} />
               <Route path="/dictionary" element={<Dictionary />} />
+              <Route path="/recipes" element={<Recipes />} />
             </Route>
           </Routes>
         </HashRouter>

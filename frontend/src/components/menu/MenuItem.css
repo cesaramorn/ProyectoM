@@ -31,6 +31,14 @@
   color: #ff6600;
 }
 
+.menu-item__link.menu-item__link--danger {
+  color: #c0392b;
+}
+
+.menu-item__link.menu-item__link--danger:hover {
+  color: #e74c3c;
+}
+
 @media (max-width: 768px) {
   .menu-item__link {
     font-size: 0.9rem;

@@ -5,6 +5,7 @@ export const publicNavigationItems = [
 export const privateNavigationItems = [
   { label: "Inicio", path: "/" },
   { label: "Diccionario", path: "/dictionary" },
+  { label: "Recetas", path: "/recipes" },
   { label: "Viajes", path: "/travel" },
-  { label: "Salir", action: "logout" },
+  { label: "Salir", action: "logout", variant: "danger" },
 ];

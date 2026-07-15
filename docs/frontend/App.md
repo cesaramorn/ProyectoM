@@ -29,6 +29,8 @@ Accessible without internal layout:
 Wrapped inside the main layout component.
 
 - `/travel` → Travel page
+- `/dictionary` → Dictionary page
+- `/recipes` → Recipes page
 
 ---
 

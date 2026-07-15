@@ -20,6 +20,7 @@ The component receives props and renders either a React Router `Link` or a `<but
 - `label` — Display text for the navigation item
 - `path` — Route path the link navigates to (optional; requires `react-router-dom`)
 - `onClick` — Click handler for action-based items like logout (optional)
+- `variant` — Visual variant string (optional). `"danger"` applies red styling for destructive actions like logout
 
 **Behavior:**
 - If `onClick` is provided, renders a `<button>` that calls the handler when clicked
@@ -43,4 +44,5 @@ Co-located CSS file `MenuItem.css` lives next to the component, following the pr
 
 - `.menu-item`: Flex child that grows to fill available space with centered text and a right border separator. The last item removes its border.
 - `.menu-item__link`: Block-level link filling the list item, with dark text color (`#1b1b32`), no underline, and an orange hover effect (`#ff6600`).
+- `.menu-item__link--danger`: Red text color variant (`#c0392b`) for destructive actions like logout. Hover shifts to a lighter red (`#e74c3c`).
 - Responsive adjustments reduce font size on screens under 768px, matching the parent `Menu` breakpoint.
