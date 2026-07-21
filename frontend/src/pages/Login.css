@@ -52,6 +52,43 @@
   background-color: #ff6600;
 }
 
+.login-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #1b1b32;
+  text-align: center;
+}
+
+/* Forgot password */
+.login-forgot-link {
+  background: none !important;
+  color: #888 !important;
+  font-weight: normal !important;
+  font-size: 0.85rem !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.login-forgot-link:hover {
+  color: #555 !important;
+  background: none !important;
+}
+
+.login-forgot-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.login-success {
+  font-size: 0.9rem;
+  color: #27ae60;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* Error */
 .login-error {
   margin-top: 0.5rem;

@@ -8,6 +8,7 @@ It is responsible for:
 
 - Managing user authentication state
 - Listening to Supabase auth state changes
+- Detecting password recovery sessions
 - Providing a loading state during initial session fetch
 - Exposing authentication data via React Context
 
@@ -24,14 +25,16 @@ Wraps the application and provides authentication context to all children.
 **State:**
 - `user` — Current authenticated user object or `null`
 - `loading` — Boolean indicating if the initial session is being fetched
+- `isRecoverySession` — Boolean set to `true` when a `PASSWORD_RECOVERY` event is received, indicating the user arrived via password reset email
 
 **Effects:**
 - On mount, fetches the current session from Supabase and sets the initial user state
-- Subscribes to `onAuthStateChange` to update user state on login, logout, or token refresh
+- Subscribes to `onAuthStateChange` to update user state on login, logout, password recovery, or token refresh
+- Sets `isRecoverySession` to `true` on `PASSWORD_RECOVERY` events and resets it to `false` on `SIGNED_IN` or `TOKEN_REFRESHED`
 - Cleans up the subscription on unmount
 
 **Context Value:**
-Memoized object containing `{ user, loading, isAuthenticated, signOut }` to prevent unnecessary re-renders.
+Memoized object containing `{ user, loading, isRecoverySession, isAuthenticated, signOut }` to prevent unnecessary re-renders.
 
 ### useAuth Hook
 
@@ -61,5 +64,5 @@ Wrap the application (typically in `App.jsx`) with `AuthProvider`:
 Access auth state in components:
 
 ```jsx
-const { user, loading, isAuthenticated, signOut } = useAuth();
+const { user, loading, isRecoverySession, isAuthenticated, signOut } = useAuth();
 ```

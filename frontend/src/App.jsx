@@ -1,5 +1,6 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
+import { useEffect } from "react";
+import { HashRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 
 import "./App.css";
 
@@ -10,7 +11,21 @@ import Dictionary from "./pages/Dictionary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Recipes from "./pages/Recipes";
+import ResetPassword from "./pages/ResetPassword";
 import Travel from "./pages/Travel";
+
+function AuthEventHandler() {
+  const { isRecoverySession } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isRecoverySession) {
+      navigate("/reset-password", { replace: true });
+    }
+  }, [isRecoverySession, navigate]);
+
+  return null;
+}
 
 function App() {
   return (
@@ -18,11 +33,13 @@ function App() {
       <div className="app-container">
         <HashRouter>
           <BackgroundClouds />
+          <AuthEventHandler />
 
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
 
             {/* Private routes */}
             <Route element={<Layout />}>
@@ -30,6 +47,8 @@ function App() {
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/recipes" element={<Recipes />} />
             </Route>
+
+            <Route path="*" element={<Home />} />
           </Routes>
         </HashRouter>
       </div>
